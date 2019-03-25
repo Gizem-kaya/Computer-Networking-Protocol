@@ -3,6 +3,8 @@
 #include <string.h>
 #include <time.h> 
 
+ #  Computer Networking Simulator with Stack and Queue
+
 
 int main(int argc, char *argv[]) {
 			
