@@ -23,7 +23,7 @@ The objective is to enable the peers (we’ll refer to them as clients) to commu
 other by exchanging messages while abiding by a set of protocols.
 
 
-Frames as Stacks:
+### Frames as Stacks:
 
 Before data packets that carry message fragments can be sent, they will have to be encapsulated 
 into Data Link/Physical layer frames which must be implemented as stacks of
@@ -32,10 +32,11 @@ IDs for the application layer, the sender and receiver’s IP addresses for netw
 numbers for transport layer, physical MAC addresses for the physical layer, etc.) as defined
 by the network protocol stack. A frame structure is shown in the figure below.
 
-![3](https://user-images.githubusercontent.com/32525636/61930805-92367900-af87-11e9-8c6b-32599dac15b6.png)
+
+![3](https://user-images.githubusercontent.com/32525636/61930918-e4779a00-af87-11e9-867e-8b5cd3bb4ae0.png)
 
 
-Outgoing and Incoming Queues:
+### Outgoing and Incoming Queues:
 
 Each client will have send and receive buffers (that must be implemented as queues) for
 outgoing and incoming messages respectively (see the illustration below). We may assume
@@ -56,7 +57,7 @@ message chunk will be sent in the first frame and received in the first frame on
 side).
 
 
-Routing:
+### Routing:
 
 When a client receives message frames in its incoming queue, it must check who the intended
 receiver is. If the frame is addressed to the receiving client, it can proceed to unpack the
@@ -66,7 +67,9 @@ the message. However, if the message is intended for someone else, the client mu
 routing table to determine the next hop that the frames should take to their destination.
 Routing tables of each client will have the following format:
 
+
 ![5](https://user-images.githubusercontent.com/32525636/61930811-982c5a00-af87-11e9-9e29-0b5be15cf7b7.png)
+
 
 
 Intended Destination Neighbor to which the packet should be forwarded
@@ -84,7 +87,7 @@ of B (evident from B’s routing table entry), so B forwards the message to D.
 Frames may have to make multiple hops over the network before they reach they final destination. The information about the total number of hops will also need to be saved in the
 logs.
 
-Logs:
+### Logs:
 
 Every network activity must be logged. Thus, each client will have its own log which will
 store the information about the sent, received, and forwarded messages. Each log entry should
