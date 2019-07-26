@@ -87,13 +87,21 @@ Logs:
 Every network activity must be logged. Thus, each client will have its own log which will
 store the information about the sent, received, and forwarded messages. Each log entry should
 store the following information:
+
 • Timestamp: the date and time of the activity,
+
 • Message that was carried in the frames,
+
 • Total number of frames that carried the whole message,
+
 • Total number of hops that frames have made so far through the network,
+
 • Sender ID,
+
 • Receiver ID,
-• Activity type (message sent, received or forwarded), and
+
+• Activity type (message sent, received or forwarded),
+
 • Activity success status (successful or failed).
 
 ""
