@@ -11,12 +11,13 @@ similar to the Internet protocol suite._**
 
 The network protocol stack will consist of four layers each of which will have a different
 purpose as shown in the Table below:
-""
 
+![Untitled](https://user-images.githubusercontent.com/32525636/61930796-8c409800-af87-11e9-8ed2-ff47c29a7b17.png)
 
 The network has a peer-to-pear model. An example network topology is shown in the
 figure below:
-""
+
+![2](https://user-images.githubusercontent.com/32525636/61930803-8fd41f00-af87-11e9-9fd2-7cbd8a8cd6fe.png)
 
 The objective is to enable the peers (we’ll refer to them as clients) to communicate to each
 other by exchanging messages while abiding by a set of protocols.
@@ -31,7 +32,8 @@ IDs for the application layer, the sender and receiver’s IP addresses for netw
 numbers for transport layer, physical MAC addresses for the physical layer, etc.) as defined
 by the network protocol stack. A frame structure is shown in the figure below.
 
-""
+![3](https://user-images.githubusercontent.com/32525636/61930805-92367900-af87-11e9-8c6b-32599dac15b6.png)
+
 
 Outgoing and Incoming Queues:
 
@@ -42,9 +44,8 @@ enough space on a queue; rather, the queue will expand as much as necessary to a
 any frames that need to be placed. We need to dynamically allocate and manage (reallocate
 or free) memory used by all queues as necessary.
 
+![4](https://user-images.githubusercontent.com/32525636/61930807-95ca0000-af87-11e9-8ea6-3117800a9642.png)
 
-
-""
 
 The figure above illustrates an example communication between a client A and a client B in
 which A is messaging B. The message is first encapsulated in frames each of which carries a
@@ -65,7 +66,8 @@ the message. However, if the message is intended for someone else, the client mu
 routing table to determine the next hop that the frames should take to their destination.
 Routing tables of each client will have the following format:
 
-""
+![5](https://user-images.githubusercontent.com/32525636/61930811-982c5a00-af87-11e9-9e29-0b5be15cf7b7.png)
+
 
 Intended Destination Neighbor to which the packet should be forwarded
 Routing tables will have multiple rows, one for each client in the network. For instance, the
@@ -104,5 +106,5 @@ store the following information:
 
 • Activity success status (successful or failed).
 
-""
+![6](https://user-images.githubusercontent.com/32525636/61930817-9b274a80-af87-11e9-87b1-c1d1b2ea71bf.png)
 
