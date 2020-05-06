@@ -1,5 +1,4 @@
-# C
-## Data Structures
+## Data Structures in C
 
 ## Nested Stack and Queues
 
