@@ -905,7 +905,7 @@ int main(int argc, char *argv[]) {
 	fclose(client_data);
 	fclose(routing_data);
 	fclose(command_data);
-	free (temporary);
+	free (temporary);		# free allocated spaces 
 	free(sender_ID);
 	free(receiver_ID);
 	return 0;
