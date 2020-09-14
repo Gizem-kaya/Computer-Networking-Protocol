@@ -1,8 +1,4 @@
-# Data Structures in C
-
-## Nested Stack and Queues
-
-
+# Simplified-Computer-Networking-Protocol
 
 **_A simple version of network communication between peers within
 a network; that is, to implement a highly simplified computer networking protocol family
